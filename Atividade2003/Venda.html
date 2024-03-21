@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <h1>Finalizando Venda</h1>
+
+        <label for="nome">Nome Vendedor:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="venda">Valor Da Venda:</label>
+        <input type="number" id="venda" name="venda">
+
+        <button type="button"  onclick="cadastrar()">Cadastrar</button>
+        <button type="button"  onclick="remover()">Remover</button>
+
+        <table border="1" id="tabela">
+            <tr>
+                <td>
+                    Id
+                </td>
+                <td>
+                    Nome Vendedor
+                </td>
+                <td>
+                    Valor
+                </td>
+                <td>
+                    Desconto
+                </td>
+            </tr>
+        </table>
+
+    </form>    
+
+    <script>
+        let vetor=[];
+        function cadastrar(){
+
+            let nome = document.getElementById("nome").value;
+            let venda = parseFloat(document.getElementById("venda").value);
+
+            base=venda*0,10
+            desconto=venda-base
+
+            vetor.push(nome);
+            vetor.push(venda);
+            console.log("Vetor preenchido:", vetor);
+            preencherTabela(nome, venda)
+        }
+
+        function remover(){
+            vetor.pop(nome);
+            vetor.pop(venda);
+            console.log("Vetor preenchido:", vetor);
+        }
+
+        function preencherTabela(nome, venda,desconto){
+            var elementos = vetor.length / 2;
+            var table = document.getElementById("tabela").innerHTML += "<tr><td>"+elementos+"</td><td>"+nome+"</td><td>"+venda+"</td><td>"+desconto+"</td></tr>";
+        }
+
+        function removerTabela(nome,venda,elementos,desconto){
+
+        }
+
+    
+
+
+    </script>    
+    
+</body>
+</html>
