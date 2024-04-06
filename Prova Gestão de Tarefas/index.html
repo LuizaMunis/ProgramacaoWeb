@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestao de tarefa</title>
+</head>
+
+<body>
+
+    <form id="formulario">
+
+        <h1>Gestão de Tarefas Diárias</h1>
+        <input type="text" id="categoria" name="categoria" placeholder="Categoria"><br><br>
+        <input type="text" id="tarefa" name="tarefa" placeholder="Tarefa"><br><br>
+        <input type="text" id="prioridade" name="prioridade" placeholder="Prioridade"><br><br>
+        <input type="text" id="descricao" name="descricao" placeholder="Descrição"><br><br>
+        <input type="date" id="data" name="data" placeholder="Data"><br><br>
+
+        <button type="button" id="enviar" onclick="enviarform()">Enviar</button><br><br>
+    </form>
+    <h3>Tabela Gestão Diaria</h3>
+    <div id="tabela">
+        <table id="tab" border="1">
+            <tr>
+                <td> Categoria <strong></td>
+                <td> Tarefa</td>
+                <td> Prioridade</td>
+                <td> Descrição</td>
+                <td> Data</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
