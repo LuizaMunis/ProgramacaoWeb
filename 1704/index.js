@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
     function capitalizeFirstLetter(string){
         return string.charAt(0).toUpperCase()+string.slice(1); }
 
-    
     app.get('/inserir', (req, res) => {
 
         class aluno{
